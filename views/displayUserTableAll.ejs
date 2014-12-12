@@ -1,0 +1,31 @@
+<% include header %>
+
+
+   <% if(rs.length > 0) { %>
+    <table>
+	<tr>
+		<th>AccountID</th>
+		<th>Username</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		<th>Bio</th>
+	</tr>
+	<% for (var i=0; rs.length > i; i++) { %>
+	  	<tr>
+             <td><%= rs[i].AccountID %></td>
+             <td> <%= rs[i].Username %></td>
+             <td><%= rs[i].Email %></td>
+             <td><%= rs[i].Password %></td>
+             <td><%= rs[i].FirstName %></td>
+            <td><%= rs[i].LastName %></td>
+            <td><%= rs[i].Bio %></td>
+        </tr>
+        <% } %>
+    </table>
+    <% } else { %>
+         No users are entered into the database.
+    <% } %>
+
+<% include footer %>

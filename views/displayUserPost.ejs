@@ -1,0 +1,42 @@
+
+<% include header %>
+
+
+   <% if(rs.length > 0) { %>
+    <table>
+	<tr>
+		<th>PersonID: </th><td><%= rs[0].PersonID %></td>
+	</tr>	
+    <tr>    
+        <th>Money: </th><td> <%= rs[0].Money %></td>
+	</tr>
+	<tr>
+        <th>FirstName: </th><td> <%= rs[0].FirstName %></td>
+    </tr>
+   	<tr>
+        <th>LastName: </th><td> <%= rs[0].LastName %></td>
+    </tr>
+    <tr>
+        <th>StateofResidence: </th><td> <%= rs[0].StateofResidence %></td>
+    </tr>
+
+    <!--
+    <tr>
+		<th>Tweet:</th>
+	</tr>
+	--!>
+
+    </table>
+   <!-- 
+    <ol>
+   <% for (var i=0; rs.length > i; i++) { %>
+        <li>Tweets: <%= rs[i].Post %> <br>		
+        Number of Retweets: <%= rs[i].ReTweet %></li>
+        <% } %>
+       </ol>
+    --!>
+    <% } else { %>
+         No users are entered into the database.
+    <% } %>
+
+<% include footer %>

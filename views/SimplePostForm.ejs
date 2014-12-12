@@ -1,0 +1,23 @@
+<% include header %>
+
+<form method="POST" action="<%= action %>">
+    <table id="login">
+        <tr><td>AccountID:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="accountID" name="accountID" /></td>
+        </tr>
+        <tr><td>Tweet:</td>
+            <td><input type="text" id="post" name="post" /></td>
+        </tr>
+        <tr><td>Retweet Count (Integers Only):</td>
+            <td><input type="text" id="retweet" name="retweet" /></td>
+        </tr>
+
+    </table>
+    <input type="submit">
+</form>
+
+<% include footer %>
+~
+~
+

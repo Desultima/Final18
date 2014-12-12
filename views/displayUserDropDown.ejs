@@ -1,0 +1,20 @@
+<% include header %>
+	
+	<% if ( rs.length > 0) { %>
+	<form method="get" action="/user/view">
+		<label for="PersonID">Users</label>
+		<select id="PersonID" name="PersonID">
+			<%for (var i=0; rs.length > i; i++){ %>
+			<option value="<%=rs[i].PersonID %>">
+				<%= rs[i].FirstName %>
+               	<%= rs[i].LastName %>
+  
+			</option>
+			<% } %>
+		</select>
+		<input type="submit">
+		</form>
+		<% } else { %>
+			No People are entered into the main database.
+		<% } %>
+<% include footer %>

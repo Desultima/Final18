@@ -1,0 +1,20 @@
+<% include header %>
+<form method="POST" action="/user/Spouse3">
+    <table id="login">
+    
+    	<tr><td>New Spouses ID:</td>
+            <td><input type="text" id="SpouseID" name="SpouseID" ></td>
+        </tr>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="hidden" id="personid" name="personid" value="<%=rs[0].AccountID%>" /></td>
+        
+        <tr><td>New Spouses Name:</td>
+            <td><input type="text" id="SpouseName" name="SpouseName" /></td>
+            
+		
+
+    </table>
+    <input type="submit">
+</form>
+
+<% include footer %>

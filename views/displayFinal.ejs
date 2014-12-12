@@ -1,0 +1,33 @@
+<% include header %>
+<style>
+table, th, td {
+	border: 1px solid black;
+	}
+</style>
+
+    <table style="width:100%">
+	<tr>
+		<th>Username</th>
+		<th>FirstName</th>
+		<th>LastName</th>
+		<th>Bio</th>
+		<th>Total Retweets</th>
+		<th>Average Retweets</th>
+		<th>Number of Posts Made</th>
+		<th>Number of Followers</th>
+		
+	</tr>
+	  	<tr>
+             <td align="center"> <%= Username %></td>
+             <td align="center"><%= FirstName %></td>
+            <td align="center"><%= LastName %></td>
+            <td align="center"><%= Bio %></td>
+            <td align="center"><%= TotalRetweets %></td>
+            <td align="center"><%= AverageRetweets %></td>
+            <td align="center"><%= NumPostsMade %></td>
+            <td align="center"><%= NumFollowers %></td>
+            
+        </tr>
+    </table>
+
+<% include footer %>

@@ -1,0 +1,26 @@
+
+<% include header %>
+
+
+   <% if(rs.length > 0) { %>
+    <table>
+	<tr>
+		<th>AccountID: </th><td><%= rs[0].AccountID %></td>
+		<th>Username: </th><td> <%= rs[0].Username %></td>
+	</tr>
+	<tr>
+		<th>Tweet:</th>
+	</tr>
+	  
+    </table>
+    <ol>
+   <% for (var i=0; rs.length > i; i++) { %>
+        <li>Tweets: <%= rs[i].Post %> <br>		
+        Number of Retweets: <%= rs[i].ReTweet %></li>
+        <% } %>
+       </ol>
+    <% } else { %>
+         No users are entered into the database.
+    <% } %>
+
+<% include footer %>

@@ -1,0 +1,18 @@
+<% include header %>
+	
+	<% if ( rs.length > 0) { %>
+	<form method="get" action="/user/edituser2">
+		<label for="AccountID">Users</label>
+		<select id="AccountID" name="AccountID">
+			<%for (var i=0; rs.length > i; i++){ %>
+			<option value="<%=rs[i].AccountID %>">
+				<%= rs[i].Username %>
+			</option>
+			<% } %>
+		</select>
+		<input type="submit">
+		</form>
+		<% } else { %>
+			No users are entered into the database.
+		<% } %>
+<% include footer %>

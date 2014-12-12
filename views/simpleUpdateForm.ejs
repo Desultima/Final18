@@ -1,0 +1,35 @@
+<% include header %>
+<form method="POST" action=""/user/edituser2"">
+    <table id="login">
+    
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="hidden" id="accountID" name="accountID" value="<%=rs[0].AccountID%>" /></td>
+        </tr>
+
+	<tr><td>Username:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="username" name="username" value="<%=rs[0].Username%>" /></td>
+        </tr>
+
+        <tr><td>Email:</td>
+            <!-- name attribute must be provided for non ajax forms -->
+            <td><input type="text" id="email" name="email" value="<%=rs[0].Email%>" /></td>
+        </tr>
+        <tr><td>Password:</td>
+            <td><input type="password" id="password" name="password" value="<%=rs[0].Password%>" /></td>
+        </tr>
+        <tr><td>FirstName:</td>
+            <td><input type="text" id="firstname" name="firstname" value="<%=rs[0].FirstName%>" /></td>
+        </tr>
+        <tr><td>LastName:</td>
+            <td><input type="text" id="lastname" name="lastname" value="<%=rs[0].LastName%>" /></td>
+        </tr>
+		<tr><td>Bio:</td>
+            <td><textarea type="text" id="bio" name="bio" rows ="4" cols="50" value="<%=rs[0].Bio%>" ></textarea></td>
+        </tr>
+
+    </table>
+    <input type="submit">
+</form>
+
+<% include footer %>
